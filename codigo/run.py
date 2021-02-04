@@ -188,14 +188,16 @@ def obtenerMensaje(a):
             cadena = mensaje_final[1]
         else:
             if(a >= 16):
-                cadena = mensaje_final[2] 
+                cadena = mensaje_final[2]
+            else:
+                cadena = "nula"     
     return cadena                  
 
 if __name__ == "__main__":
     bandera = True 
     contador = 0
     while bandera: # Se hace un ciclo repetitivo while 
-        contador += 1 # Se inicia un contador 
+        
         print("*--------------->Menú de opciones<--------------*")
         opcion = int(input("> Si ingresa 1 se creara una cuenta de Facebook.\n"
                     + "> Si ingresa 2 se creara una cuenta de Twitter.\n"
@@ -207,27 +209,34 @@ if __name__ == "__main__":
                     + "*------------------\<*>|||<*>/------------------*\n> "))
         # Iniciamos una condicional if para comparar la opcion ingresada            
         if (opcion == 1):
+            contador += 1 
             cuenta_facebook = crearFacebook()
             print(cuenta_facebook)
         else:
             if(opcion == 2):
+                contador += 1 
                 crearTwitter()
             else:
                 if(opcion == 3):
+                    contador += 1 
                     cuenta_whatsapp = crearWhatsapp()
                     print(cuenta_whatsapp)
                 else:
                     if(opcion == 4):
+                        contador += 1 
                         crearTelegram()                       
                     else:
                         if(opcion == 5):
+                            contador += 1 
                             cuenta_signal = crearSignal()
                             print(cuenta_signal)
                         else:
                             if(opcion == 6):
+                                contador += 1 
                                 crearInstagram()
                             else:
                                 if(opcion == 7):
+                                    contador += 1 
                                     cuenta_flickr = crearFlickr()
                                     print(cuenta_flickr) 
                                 else:
