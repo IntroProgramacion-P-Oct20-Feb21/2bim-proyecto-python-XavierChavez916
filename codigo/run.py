@@ -183,21 +183,18 @@ def obtenerMensaje(a):
 
     if ((a >= 1) and (a <= 5)):
         cadena = mensaje_final[0]
+    elif((a >= 6) and (a <= 15)):
+        cadena = mensaje_final[1]
+    elif(a >= 16):
+        cadena = mensaje_final[2]
     else:
-        if((a >= 6) and (a <= 15)):
-            cadena = mensaje_final[1]
-        else:
-            if(a >= 16):
-                cadena = mensaje_final[2]
-            else:
-                cadena = "nula"     
+        cadena = "nula"     
     return cadena                  
 
 if __name__ == "__main__":
     bandera = True 
     contador = 0
     while bandera: # Se hace un ciclo repetitivo while 
-        
         print("*--------------->Menú de opciones<--------------*")
         opcion = int(input("> Si ingresa 1 se creara una cuenta de Facebook.\n"
                     + "> Si ingresa 2 se creara una cuenta de Twitter.\n"
@@ -212,35 +209,29 @@ if __name__ == "__main__":
             contador += 1 
             cuenta_facebook = crearFacebook()
             print(cuenta_facebook)
+        elif(opcion == 2):
+            contador += 1 
+            crearTwitter()
+        elif(opcion == 3):
+            contador += 1 
+            cuenta_whatsapp = crearWhatsapp()
+            print(cuenta_whatsapp)
+        elif(opcion == 4):
+            contador += 1 
+            crearTelegram()                       
+        elif(opcion == 5):
+            contador += 1 
+            cuenta_signal = crearSignal()
+            print(cuenta_signal)
+        elif(opcion == 6):
+            contador += 1 
+            crearInstagram()
+        elif(opcion == 7):
+            contador += 1 
+            cuenta_flickr = crearFlickr()
+            print(cuenta_flickr) 
         else:
-            if(opcion == 2):
-                contador += 1 
-                crearTwitter()
-            else:
-                if(opcion == 3):
-                    contador += 1 
-                    cuenta_whatsapp = crearWhatsapp()
-                    print(cuenta_whatsapp)
-                else:
-                    if(opcion == 4):
-                        contador += 1 
-                        crearTelegram()                       
-                    else:
-                        if(opcion == 5):
-                            contador += 1 
-                            cuenta_signal = crearSignal()
-                            print(cuenta_signal)
-                        else:
-                            if(opcion == 6):
-                                contador += 1 
-                                crearInstagram()
-                            else:
-                                if(opcion == 7):
-                                    contador += 1 
-                                    cuenta_flickr = crearFlickr()
-                                    print(cuenta_flickr) 
-                                else:
-                                    print("Opción incorrecta") 
+            print("Opción incorrecta") 
         # Se pregunta al usuario si desea salir del ciclo           
         salida = input("Ingrese 'si' para salir del ciclo\n> ")
         salida = salida.lower() # Convertimos lo que el usuario introduce a minúscula
