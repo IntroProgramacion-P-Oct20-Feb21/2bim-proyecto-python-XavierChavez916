@@ -178,6 +178,7 @@ def crearFlickr():
 
 # Se crea la funcion obtenerMensaje
 def obtenerMensaje(a):
+    cadena = ""
     mensaje_final = ["Campaña con poca afluencia",
             "Campaña moderada siga adelante", "Excelente campaña"]
 
@@ -187,8 +188,7 @@ def obtenerMensaje(a):
         cadena = mensaje_final[1]
     elif(a >= 16):
         cadena = mensaje_final[2]
-    else:
-        cadena = "nula"     
+       
     return cadena                  
 
 if __name__ == "__main__":
